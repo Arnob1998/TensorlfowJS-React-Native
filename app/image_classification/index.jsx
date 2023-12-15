@@ -3,10 +3,9 @@ import { View, Text, Image, Button, TouchableOpacity, SafeAreaView, ActivityIndi
 import * as tf from '@tensorflow/tfjs';
 import { fetch, decodeJpeg, bundleResourceIO } from '@tensorflow/tfjs-react-native';
 import * as mobilenet from '@tensorflow-models/mobilenet';
-import * as jpeg from "jpeg-js";
 import * as FileSystem from 'expo-file-system';
 import * as ImagePicker from 'expo-image-picker';
-
+import { StatusBar } from 'expo-status-bar';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faImage, faCamera, faCircleCheck, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
@@ -89,7 +88,7 @@ const ImgModel = () => {
                 backgroundColor: "black",
             }}
         >
-
+            <StatusBar backgroundColor='black' barStyle='light-content' translucent={false}></StatusBar>
             <Text style={{ color: "white", fontWeight: 'bold', fontSize: 30, marginBottom: 25, marginTop:15 }}>Classification</Text>
 
             {selectedImage

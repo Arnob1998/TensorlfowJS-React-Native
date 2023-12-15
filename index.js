@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import { registerRootComponent } from 'expo';
-
+import { StatusBar } from 'expo-status-bar';
+<StatusBar backgroundColor='black' barStyle='light-content' translucent={false}></StatusBar>
 import App from './App';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);

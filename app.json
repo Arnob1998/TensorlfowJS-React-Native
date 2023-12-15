@@ -7,7 +7,7 @@
     "slug": "tensorflow-showcase-expo",
     "version": "1.0.0",
     "androidStatusBar": {
-      "backgroundColor": "black",
+      "backgroundColor": "#000000",
       "translucent": false
     },
     "assetBundlePatterns": [
@@ -29,6 +29,9 @@
       "eas": {
         "projectId": "0d970358-ab0f-44c6-b5f8-6e6c3c515e82"
       }
+    },
+    "android": {
+      "package": "com.redwan1998.tensorflowshowcaseexpo"
     }
   }
 }

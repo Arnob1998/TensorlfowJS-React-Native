@@ -10,6 +10,9 @@ module.exports = (async () => {
       resolver: {
         // Add bin to assetExts
         assetExts: [...assetExts, 'bin'],
-      }
+      },
+      transformer: {
+        assetPlugins: ['expo-asset/tools/hashAssetFiles'],
+      },
     };
   })();

@@ -1,12 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Image, Button, TouchableOpacity, SafeAreaView, ActivityIndicator, StyleSheet, ScrollView } from 'react-native';
-import * as FileSystem from 'expo-file-system';
-// import { StatusBar, Stack } from 'expo-status-bar';.
-import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faImage, faCamera, faCircleCheck, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
-import Constants from "expo-constants";
+import { StatusBar } from 'expo-status-bar';
 
 const App = () => {
 
@@ -22,19 +17,18 @@ const App = () => {
                 backgroundColor: "black",
             }}
         >
-            {/* <StatusBar style="auto"
-                       ></StatusBar> */}
+            <StatusBar backgroundColor='black' barStyle='light-content' translucent={false}></StatusBar>
                        
             <ScrollView >
                 {/* Vision Start */}
-                <Text style={{ color: "white", fontWeight: 'bold', fontSize: 30, marginLeft: 15, marginTop: 10}}>Header</Text>
-                <Text style={{ color: "#91989c", fontSize: 15, marginLeft: 15, marginTop: 5, marginBottom: 5 }}>Explore pre-trained models to add computer vision, natural language processing (NLP), and other common ML tasks to your web and browser-based applications.</Text>
+                <Text style={{ color: "white", fontWeight: 'bold', fontSize: 30, marginLeft: 15, marginTop: 10}}>Model Collections</Text>
+                <Text style={{ color: "#91989c", fontSize: 15, marginLeft: 15, marginTop: 5, marginBottom: 5 }}>Explore pre-trained models to add computer vision, natural language processing (NLP), and other common ML tasks in your mobile.</Text>
                 <View>
                     <Text style={{ color: "#369eff", fontWeight: 'bold', fontSize: 25, marginLeft: 15, marginTop: 10, marginBottom: 20 }}>Vision</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <ScrollView horizontal={true} >
                             <TouchableOpacity
-                                style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#10243e', alignItems: 'center', borderRadius: 10, borderColor: '#369eff', borderWidth: 1, width: 150, height: 130 }}
+                                style={{position:"relative" ,padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#10243e', alignItems: 'center', borderRadius: 10, borderColor: '#369eff', borderWidth: 1, width: 150, height: 130 }}
                                 onPress={() => { router.push("image_classification") }}>
                                 <Image source={require('../assets/img/tile_model_image.png')} style={{ width: 60, height: 60 }} />
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
@@ -47,7 +41,7 @@ const App = () => {
 
                             <TouchableOpacity
                                 style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#10243e', alignItems: 'center', borderRadius: 10, borderColor: '#369eff', borderWidth: 1, width: 150, height: 130 }}
-                                onPress={() => { console.log("clicked") }}>
+                                onPress={() => { router.push("object_detection") }}>
                                 <Image source={require('../assets/img/tile_model_shapes.png')} style={{ width: 60, height: 60 }} />
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
                                     Object
@@ -79,39 +73,39 @@ const App = () => {
                         <ScrollView horizontal={true} >
                             <TouchableOpacity
                                 style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#391a03', alignItems: 'center', borderRadius: 10, borderColor: '#ff802b', borderWidth: 1, width: 150, height: 130 }}
-                                onPress={() => { console.log("clicked") }}>
-                                <Image source={require('../assets/img/tile_model_image.png')} style={{ width: 60, height: 60 }} />
+                                onPress={() => { router.push("pose_detection") }}>
+                                <Image source={require('../assets/img/tile_model_facemesh.png')} style={{ width: 60, height: 60 }} />
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Image
+                                    Face
                                 </Text>
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Classification
-                                </Text>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity
-                                style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#391a03', alignItems: 'center', borderRadius: 10, borderColor: '#ff802b', borderWidth: 1, width: 150, height: 130 }}
-                                onPress={() => { console.log("clicked") }}>
-                                <Image source={require('../assets/img/tile_model_shapes.png')} style={{ width: 60, height: 60 }} />
-                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Object
-                                </Text>
-                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Detection
+                                    Landmarks
                                 </Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
                                 style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#391a03', alignItems: 'center', borderRadius: 10, borderColor: '#ff802b', borderWidth: 1, width: 150, height: 130 }}
                                 onPress={() => { console.log("clicked") }}>
-                                <Image source={require('../assets/img/tile_model_people.png')} style={{ width: 60, height: 60 }} />
+                                <Image source={require('../assets/img/tile_model_handpose.png')} style={{ width: 60, height: 60 }} />
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Semantic
+                                    Hand
                                 </Text>
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Segmentation
+                                    Pose
                                 </Text>
                             </TouchableOpacity>
+
+                            {/* <TouchableOpacity
+                                style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#391a03', alignItems: 'center', borderRadius: 10, borderColor: '#ff802b', borderWidth: 1, width: 150, height: 130 }}
+                                onPress={() => { console.log("clicked") }}>
+                                
+                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
+                                    Coming
+                                </Text>
+                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
+                                    Soon
+                                </Text>
+                            </TouchableOpacity> */}
                         </ScrollView>
                     </View>
                 </View>
@@ -124,36 +118,36 @@ const App = () => {
                             <TouchableOpacity
                                 style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#0f291e', alignItems: 'center', borderRadius: 10, borderColor: '#3cb179', borderWidth: 1, width: 150, height: 130 }}
                                 onPress={() => { console.log("clicked") }}>
-                                <Image source={require('../assets/img/tile_model_image.png')} style={{ width: 60, height: 60 }} />
+                                <Image source={require('../assets/img/tile_model_question.png')} style={{ width: 60, height: 60 }} />
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Image
+                                    Question
                                 </Text>
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Classification
-                                </Text>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity
-                                style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#0f291e', alignItems: 'center', borderRadius: 10, borderColor: '#3cb179', borderWidth: 1, width: 150, height: 130 }}
-                                onPress={() => { console.log("clicked") }}>
-                                <Image source={require('../assets/img/tile_model_shapes.png')} style={{ width: 60, height: 60 }} />
-                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Object
-                                </Text>
-                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Detection
+                                    Answering
                                 </Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
                                 style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#0f291e', alignItems: 'center', borderRadius: 10, borderColor: '#3cb179', borderWidth: 1, width: 150, height: 130 }}
                                 onPress={() => { console.log("clicked") }}>
-                                <Image source={require('../assets/img/tile_model_people.png')} style={{ width: 60, height: 60 }} />
+                                <Image source={require('../assets/img/tile_model_faces.png')} style={{ width: 60, height: 60 }} />
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Semantic
+                                    Text
                                 </Text>
                                 <Text style={{ color: '#fff', fontWeight: 'bold' }}>
-                                    Segmentation
+                                    Toxicity
+                                </Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                style={{ padding: 10, marginHorizontal: 10, flexDirection: 'col', backgroundColor: '#0f291e', alignItems: 'center', borderRadius: 10, borderColor: '#3cb179', borderWidth: 1, width: 150, height: 130 }}
+                                onPress={() => { console.log("clicked") }}>
+                                <Image source={require('../assets/img/tile_model_text.png')} style={{ width: 60, height: 60 }} />
+                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
+                                    Universal
+                                </Text>
+                                <Text style={{ color: '#fff', fontWeight: 'bold' }}>
+                                    Encoder
                                 </Text>
                             </TouchableOpacity>
                         </ScrollView>
