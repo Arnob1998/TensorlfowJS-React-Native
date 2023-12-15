@@ -28,7 +28,7 @@ https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/4406e847-
 
 Before you begin, ensure you have the following prerequisites installed. Here are the steps to install and run this application:
 
-- **Node.js:** ReactTensorAI is built and tested with Node.js v18.16.0. You can download the recommended version [here](https://nodejs.org/).
+- **Node.js:** This app was built and tested with Node.js v18.16.0. You can download the recommended version [here](https://nodejs.org/).
 - **Clone this repository:** ```git clone https://github.com/Arnob1998/TensorlfowJS-React-Native.git```
 - **Navigate to the folder:** ```cd TensorlfowJS-React-Native```
 - **Install packages:** ```npm install --legacy-peer-deps```
