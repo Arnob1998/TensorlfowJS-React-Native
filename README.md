@@ -4,11 +4,14 @@ Unleash the power of AI in the palm of your hand with RNTensorSuite - a dynamic 
 
 ## Demo
 **Image Preview**
-![IMG-20231215-WA0016](https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/2f3a8078-19e7-49a3-ba9e-e371cba855fb)
-![IMG-20231215-WA0015](https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/7230ade9-2dc8-4713-a231-5f213b4e7316)
-![IMG-20231215-WA0014](https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/5710cf3b-4459-46d3-a6fb-bd473e072aa7)
-![IMG-20231215-WA0013](https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/28c7830d-0052-403c-9f9b-666e7f6d980e)
-![IMG-20231215-WA0012](https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/c82dee67-5935-4c28-ab69-27d5b233b4fa)
+<p align="center">
+  <img src="https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/2f3a8078-19e7-49a3-ba9e-e371cba855fb" width="200" />
+  <img src="https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/7230ade9-2dc8-4713-a231-5f213b4e7316" width="200" />
+  <img src="https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/5710cf3b-4459-46d3-a6fb-bd473e072aa7" width="200" />
+  <img src="https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/28c7830d-0052-403c-9f9b-666e7f6d980e" width="200" />
+  <img src="https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/c82dee67-5935-4c28-ab69-27d5b233b4fa" width="200" />
+</p>
+
 **Video Preview**
 
 
