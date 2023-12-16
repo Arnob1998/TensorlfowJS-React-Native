@@ -19,6 +19,9 @@ https://github.com/Arnob1998/TensorlfowJS-React-Native/assets/46885415/4406e847-
 
 
 
+**Try out the preview build**
+Down the the preview build apk from [here](https://drive.google.com/file/d/15sBxZLex8FmkIQ6t7JQR9sS8CbdytTUx/view?usp=sharing/). Please note that you might need to forcefully install or click more > install anyways when google play store blocks installation. This happens because this app is not published anywhere.
+
 ## Key Features
 - 🌟 Multi-tasking capabilities: Perform image classification, object detection, pose recognition, and more. (*Currently only these three are useable planning to add more later*)
 - 🚀 Cross-platform experience: Built with React Native for seamless deployment on both iOS and Android.
